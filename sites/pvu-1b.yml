@@ -1,0 +1,27 @@
+# PVU-1C (aka DFW)
+
+serial: JAE174707UR
+
+licence: advipservices
+
+id: 18
+public: 199.87.123.192/26
+internal: 172.18.0.0
+
+c1900:
+  serial: FTX174830CV
+  overlord:
+
+peers:
+
+  corp:
+    address: 10.70.0.1
+    remote-as: 6643
+
+interfaces:
+
+  GigabitEthernet0/0/0: 
+    address: 10.70.0.4
+    netmask: 255.255.255.240 
+    description: "interface 1/21 on corp brocade router"
+

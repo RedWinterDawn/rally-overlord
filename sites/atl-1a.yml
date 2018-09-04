@@ -1,0 +1,70 @@
+# ATL-1A
+
+licence: advipservices
+
+serial: JAE174707QJ
+
+
+
+public: 162.250.62.0/24
+
+internal: 172.22.0.0
+
+id: 22
+
+vpn: false
+
+c1900:
+  serial: FTX174830CV
+  overlord:
+    vpn-34e73a2a-0:
+      tunnel: 1
+      address: 205.251.233.122
+      key: 1rhyEPNtRV31Ph7hnkrALYi0IZkE1XHj
+      local: 166.140.13.154
+      otherside: 169.254.249.5
+      internal: 169.254.249.6 255.255.255.252
+      vrf: LTE
+    vpn-34e73a2a-1:
+      tunnel: 2
+      address: 205.251.233.121
+      key: 1UEqkwYIc7nFNxmjdphBXjDQ5mYOiXLQ
+      local: 166.140.13.154
+      otherside: 169.254.249.1
+      internal: 169.254.249.2 255.255.255.252
+      vrf: LTE
+    vpn-84e13c9a-0:
+      tunnel: 3
+      address: 205.251.233.121
+      key: 8BmMHwZbw0AF.cguxiPyk3vmqqvqB5qY
+      otherside: 169.254.249.41
+      local: 162.250.62.2
+      internal: 169.254.249.42 255.255.255.252
+
+peers:
+
+  telex:
+    address: 72.28.104.17
+    remote-as: 36086
+
+  comcast:
+    address: 173.167.56.97
+    remote-as: 7922
+
+interfaces:
+
+  GigabitEthernet0/0/0: 
+
+    address: 72.28.104.18
+    netmask: 255.255.255.248 
+    description: Telex House Blend
+
+
+  GigabitEthernet0/0/2: 
+
+    address: 173.167.56.98
+    netmask: 255.255.255.252
+    description: "Comcast CID: 15001/GIGE /ATLNGAMQ /ATLNGAMQR11"
+
+
+

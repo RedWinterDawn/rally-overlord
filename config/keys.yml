@@ -1,0 +1,17 @@
+theo:
+  type: ssh-rsa
+  hash: 9FFEADE2D2409F9E8DA08A82FBAD80B5
+  comment: theo@theo-mba.local
+  password: $1$yiCW$v4H63KefDkW3cvahs7Qz50
+
+pholmes:
+  type: ssh-rsa
+  hash: C792175A2613CF42997CF16C6EACE6BC
+  comment: GitHub@holmes41@gmail.com
+
+mmartinez:
+  type: ssh-rsa
+  hash: F759896802FF575A431BF27AAB5F544E
+  comment: mmartinez@getjive.com
+  password: $1$vbRi$o/XPMTAGVcucP4gP8gLzW/
+

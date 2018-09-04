@@ -1,0 +1,26 @@
+# PVU-1A
+
+# serial: JAE174707QJ
+
+id: 17
+public: 199.87.123.0/24
+internal: 172.17.0.0
+licence: advipservices
+
+c1900:
+  serial: FTX174830CV
+  overlord:
+
+peers:
+
+  corp:
+    address: 10.70.0.1
+    remote-as: 6643
+
+interfaces:
+
+  GigabitEthernet0/0/0: 
+    address: 10.70.0.2
+    netmask: 255.255.255.240 
+    description: "interface 1/21 on corp brocade router"
+

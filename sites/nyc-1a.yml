@@ -1,0 +1,55 @@
+# NYC-1A
+
+licence: advipservices
+
+serial: JAE17450E1U
+
+public: 162.250.61.0/24
+
+internal: 172.20.0.0
+
+id: 20
+
+vpn: false
+
+c1900:
+  serial: FTX1748301X
+  overlord:
+    vpn-54e03d4a-0:
+      tunnel: 1
+      address: 205.251.233.121
+      key: Rn1HBTEd0cX0KFCrR4zRuspmc_F6EjbJ
+      local: 166.139.17.76
+      otherside: 169.254.249.49
+      internal: 169.254.249.50 255.255.255.252
+      vrf: LTE
+    vpn-54e03d4a-1:
+      tunnel: 2
+      address: 205.251.233.122
+      key: Wuu9uRsCWa3jDhSshT2K9.oMqIFGLu.S
+      local: 166.139.17.76
+      otherside: 169.254.249.53
+      internal: 169.254.249.54 255.255.255.252
+      vrf: LTE
+
+    #vpn-84e13c9a-0:
+    #  tunnel: 3
+    #  address: 205.251.233.121
+    #  key: 8BmMHwZbw0AF.cguxiPyk3vmqqvqB5qY
+    #  otherside: 169.254.249.41
+    #  local: 162.250.62.2
+    #  internal: 169.254.249.42 255.255.255.252
+
+peers:
+
+  telex:
+    address: 72.28.111.113
+    remote-as: 36086
+
+interfaces:
+
+  GigabitEthernet0/0/0: 
+    address: 72.28.111.114
+    netmask: 255.255.255.248 
+    description: Telex House Blend TELXDIA00188548 / 000-140506 / cr2.nyc2.dia port ge-0/0/7
+

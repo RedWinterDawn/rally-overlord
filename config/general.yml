@@ -1,0 +1,38 @@
+autnum: 6643
+key: 448e352609325d8c432a5d1ea7bf7008
+ntp: pool.ntp.org
+config: http://172.16.0.136/cisco/{device}.{id}-confg?licence={licence}
+
+flow-exporter:
+
+  logstash1:
+    description: Logstash Exporter 1
+    host: 54.193.83.126
+    port: 5514
+  logstash2:
+    description: Logstash Exporter 2
+    host: 54.193.98.178
+    port: 5514
+
+syslog:
+
+  logstash1:
+    host: 54.193.83.126
+    port: 5514
+  logstash2:
+    host: 54.193.98.178
+    port: 5514
+  opscontroller:
+    host: 54.201.96.187
+    port: 601
+
+v4compat:
+  ipsec:
+    host: 1.1.1.1
+    range: 10.101.0.0/16
+    internal: GigabitEthernet0/0/3.4
+
+security:
+  
+
+
