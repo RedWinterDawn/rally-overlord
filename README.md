@@ -6,7 +6,7 @@ The input configuration files are in sites/ and config/
 
 A set of output files are generated which can then be loaded onto a cisco device using:
 
-    configure replace http://opscontroller.ftw.jiveip.net/cisco/asr1k.pvu-1b-confg list force ignorecase revert trigger error timer 1
+null
 
 To generate the output, run:
 
@@ -14,7 +14,7 @@ To generate the output, run:
 
 You can view the changes that are pending using:
 
-    show archive config differences http://opscontroller.ftw.jiveip.net/cisco/asr1k.pvu-1b-confg
+null
 
 Once a device is provisoned, you can use overlord's commands:
 
@@ -23,24 +23,23 @@ Once a device is provisoned, you can use overlord's commands:
     overlord-confirm (confirm applied changes)
     overlord-revert (revert applied changes)
 
-# Jive Configs (V1)
 
 
-## C1900
 
 Gi0/0: Trunk to the SG (management) switch.
 
-  Vlan 2: Network Infrastructure
+  Vlan 6: Network Infrastructure
   Vlan 3: IPMI management
+  Vlan 1: Voice
+  Vlan 4: MGMT
 
-
-Gi0/0: Trunk to C3550
+Gi0/1: Trunk to C3550
 
   Vlan 10: Public Internet
 
 ## ASR1K
 
-Stge 1 is applying a "seed config" which sets it up to be part of the overlord network, but not apply any V5 specific network config (all external interfaces are down, no BGP sessiosn configured, etc).  this can be seen as a "recovery" mode.  It also sets the correct licencing image.
+Stage 1 is applying a "seed config" which sets it up to be part of the overlord network, but not apply any V5 specific network config (all external interfaces are down, no BGP sessiosn configured, etc).  this can be seen as a "recovery" mode.  It also sets the correct licencing image.
 
 Once seeded, the config should be saved and router reloaded.  Once back, it should be checked to ensure that it can reach overlord using "overlord-ping".
 
@@ -57,5 +56,5 @@ TODO:
   - management ACLs
   - SNMP traps
   - call home
-
+  - mark down input(1) > PDX
 
